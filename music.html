@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional inline styles for this page */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column; /* Vertical layout */
+            align-items: center; /* Center content horizontally */
+        }
+
+        header {
+            /* Navigation menu styles go here */
+        }
+
+        /* Profile picture styles */
+        .profile-pic {
+            max-width: 100px;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+
+        /* Music Page styles */
+        .music-container {
+            padding: 20px;
+            background-color: #000; /* Dark background */
+            width: 80%; /* Limit the width to 80% of the viewport */
+            max-width: 600px; /* Set a maximum width for content */
+            margin-top: 20px; /* Add some space below the profile picture */
+        }
+
+        .music-track {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border: 1px solid #333; /* Dark border */
+            padding: 10px;
+        }
+
+        .music-cover {
+            max-width: 100px;
+            margin-right: 20px;
+        }
+
+        .music-details {
+            flex-grow: 1;
+        }
+
+        .music-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .music-artist {
+            font-size: 1rem;
+        }
+
+        /* Search Bar and Button */
+        .search-container {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .search-bar {
+            flex-grow: 1;
+            padding: 10px;
+            border: 2px solid #333; /* Dark border */
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .search-button {
+            background-color: #0074D9; /* Blue background color */
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border: 2px solid #000; /* Black border */
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .search-button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        /* Load More Button for Singles */
+        .load-more-button {
+            background-color: #0074D9; /* Blue background color */
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border: 2px solid #000; /* Black border */
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 20px; /* Add space above the button */
+            cursor: pointer;
+        }
+
+        .load-more-button:hover {
+            background-color: #ffffff; /* Darker blue on hover */
+            color: #000;
+        }
+
+        /* Albums and EPs Section */
+        .albums-section {
+            margin-top: 20px; /* Add space above the section */
+        }
+
+        .album {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border: 1px solid #333; /* Dark border */
+            padding: 10px;
+        }
+
+        .album-cover {
+            max-width: 100px;
+            margin-right: 20px;
+        }
+
+        .album-details {
+            flex-grow: 1;
+        }
+
+        .album-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .album-artist {
+            font-size: 1rem;
+        }
+
+        /* Music Player */
+        .music-player {
+            background-color: #0074D9; /* Blue background color */
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+
+        /* Slogan */
+        .slogan {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .explore-button {
+            display: inline-block;
+            background-color: #0074D9; /* Blue background color */
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border: 2px solid #000; /* Black border */
+            border-radius: 6px;
+            margin-top: 40px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            font-size: 15px;
+        
+        }
+
+        .explore-button:hover {
+            background-color: #ffffff; /* Darker blue on hover */
+            color: #000;
+        }
+
+        .explore-button:active{
+          background-color: white;
+          color: black;
+        }
+
+          /* CSS for the "Check out the New Releases" button */
+.check-out-button {
+    background-color: #0074D9; /* Blue background color */
+    color: #fff; /* White text color */
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #000; /* Black border */
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s; /* Added transform for animation */
+    margin-top: 6px;
+    cursor: pointer;
+    margin-left: 20px; /* Add space to the left of the button */
+    font-size: 15px;
+}
+
+.check-out-button:hover {
+    background-color: #ffffff; 
+    transform: translate(2px, 2px); 
+    color: #000;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Navigation menu goes here -->
+        <!-- Profile picture on the far right -->
+        <img src="FB_IMG_1671551181847.jpg" alt="Profile Picture" class="profile-pic">
+        <!-- Button to Check out New Releases -->
+
+
+    </header>
+    
+    <!-- Music Page content -->
+    <div class="music-container">
+        <!-- Search Bar and Button -->
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search for music...">
+            <a href="#" class="search-button">Search</a>
+        </div>
+
+        <!-- Singles Section -->
+        <h2>Singles</h2>
+
+        <!-- Music track 1 (Free Download) -->
+        <div class="music-track">
+            <img src="FB_IMG_1671551181847.jpg" alt="Cover Art" class="music-cover">
+            <div class="music-details">
+                <p class="music-title">static</p>
+                <p class="music-artist">Lusic-Raps</p>
+                <p class="music-description">First single of 2023 by Lusic is...</p>
+            </div>
+        </div>
+        
+        <!-- Music track 2 (Free Download) -->
+        <div class="music-track">
+            <img src="FB_IMG_1671551181847.jpg" alt="Cover Art" class="music-cover">
+            <div class="music-details">
+                <p class="music-title">Right?</p>
+                <p class="music-artist">Lusic-Raps</p>
+                <p class="music-description">inspired by unpleasenat events a new song...</p>
+            </div>
+        </div>
+
+        
+
+        <!-- Add more music tracks here -->
+        
+        <!-- Load More Button for Singles -->
+        <button id="load-more-singles" class="load-more-button">Load More Singles</button>
+
+        <!-- Albums and EPs Section -->
+        <div class="albums-section">
+            <h2>Albums and EPs</h2>
+
+            <!-- Album 1 -->
+            <div class="album">
+                <img src="FB_IMG_1671551181847.jpg" alt="Album Cover" class="album-cover">
+                <div class="album-details">
+                    <p class="album-title">This is just a tape</p>
+                    <p class="album-artist">Lusic-Raps</p>
+                    <p class="album-description">A 5 track EP, very first project from lusic...</p>
+                </div>
+            </div>
+
+            <!-- Album 2 -->
+            <div class="album">
+                <img src="FB_IMG_1671551181847.jpg" alt="Album Cover" class="album-cover">
+                <div class="album-details">
+                    <p class="album-title">Happy Birthday</p>
+                    <p class="album-artist">Lusic-Raps</p>
+                    <p class="album-description">An 11 track soulful album by Lusic-Raps..</p>
+                </div>
+            </div>
+
+            <!-- Add more albums and EPs here -->
+        </div>
+
+        <!-- Music Player -->
+        <div class="music-player">
+            <!-- Music player controls and details go here -->
+            <!-- You can use HTML5 audio tags for the player -->
+        </div>
+        
+        <!-- Slogan -->
+        <a href="index.html" class="explore-button">
+          Back home
+          <a href="purchase.html" class="check-out-button"> New Releases</a>
+         <!-- <span class="music-icon">🎵</span>  -->
+      </a>
+    
+    </div>
+  
+  
+
+    <script>
+        // JavaScript for Load More Button (Singles)
+        const loadMoreSinglesButton = document.getElementById("load-more-singles");
+        const singlesSection = document.querySelector("h2:contains('Singles')").nextElementSibling;
+
+        let singlesHidden = true;
+
+        loadMoreSinglesButton.addEventListener("click", () => {
+            if (singlesHidden) {
+                // Show more singles
+                singlesSection.querySelectorAll(".music-track.hidden").forEach((track, index) => {
+                    if (index < 5) {
+                        track.classList.remove("hidden");
+                    }
+                });
+
+                // Check if all singles are visible
+                const hiddenTracks = singlesSection.querySelectorAll(".music-track.hidden");
+                if (hiddenTracks.length === 0) {
+                    loadMoreSinglesButton.textContent = "Hide Singles";
+                }
+            } else {
+                // Hide singles
+                singlesSection.querySelectorAll(".music-track:not(.hidden)").forEach((track, index) => {
+                    if (index < 5) {
+                        track.classList.add("hidden");
+                    }
+                });
+                loadMoreSinglesButton.textContent = "Load More Singles";
+            }
+
+            singlesHidden = !singlesHidden;
+        });
+    </script>
+</body>
+</html>

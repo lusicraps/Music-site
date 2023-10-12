@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Music</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional inline styles for this page */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column; /* Vertical layout */
+            align-items: center; /* Center content horizontally */
+        }
+
+        header {
+            /* Navigation menu styles go here */
+        }
+
+        /* Profile picture styles */
+        .profile-pic {
+            max-width: 100px;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+
+        /* Purchase Page styles */
+        .purchase-container {
+            padding: 20px;
+            background-color: #000; /* Dark background */
+            width: 80%; /* Limit the width to 80% of the viewport */
+            max-width: 600px; /* Set a maximum width for content */
+            margin-top: 20px; /* Add some space below the profile picture */
+        }
+
+        /* Search Bar and Button */
+        .search-container {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .search-bar {
+            flex-grow: 1;
+            padding: 10px;
+            border: 2px solid #333; /* Dark border */
+            border-radius: 4px;
+            font-size: 1rem;
+            height: 30px; /* Adjust the height of the search bar */
+        }
+
+        .search-button {
+            background-color: #0074D9; /* Blue background color */
+            color: #fff;
+            padding: 8px 16px; /* Adjust the padding for height */
+            text-align: center;
+            text-decoration: none;
+            border: 2px solid #000; /* Black border */
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            height: 30px; /* Adjust the height of the button */
+        }
+
+        .search-button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        /* Music track styles (list format) */
+        .music-track {
+            border: 1px solid #333; /* Dark border */
+            padding: 10px;
+            margin-bottom: 10px; /* Adjust spacing between tracks */
+            display: flex;
+            align-items: center;
+        }
+
+        .music-cover {
+            max-width: 100px;
+            margin-right: 20px;
+        }
+
+        .music-details {
+            flex-grow: 1;
+        }
+
+        .music-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .music-artist {
+            font-size: 1rem;
+        }
+        .explore-button {
+            display: inline-block;
+            background-color: #0074D9; /* Blue background color */
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border: 2px solid #000; /* Black border */
+            border-radius: 15px;
+            margin-top: 40px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            font-size: 10px;
+        }
+
+        .explore-button:hover {
+            background-color: #5a2dc2; /* Darker blue on hover */
+        }
+
+        .explore-button:active{
+          background-color: white;
+          color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Navigation menu goes here -->
+        <!-- Profile picture on the far right -->
+        <img src="FB_IMG_1671551181847.jpg" alt="Profile Picture" class="profile-pic">
+    </header>
+
+    <p>Fixed price on everything, both singles and albums</p>
+    <p>whether its a 15 song album or just 1 single.</p>
+
+    
+    
+    <!-- Purchase Page content -->
+    <div class="purchase-container">
+        <!-- Search Bar and Button -->
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search for music...">
+            <a href="#" class="search-button">Search</a>
+        </div>
+
+        <!-- Music tracks (list format) -->
+        <!-- Music track 1 -->
+        <div class="music-track">
+            <img src="album1.jpg" alt="Album Cover" class="music-cover">
+            <div class="music-details">
+                <p class="music-title">Album Title 1</p>
+                <p class="music-artist">Artist Name</p>
+            </div>
+        </div>
+        
+        <!-- Music track 2 -->
+        <div class="music-track">
+            <img src="single1.jpg" alt="Single Cover" class="music-cover">
+            <div class="music-details">
+                <p class="music-title">Single Title 1</p>
+                <p class="music-artist">Artist Name</p>
+            </div>
+        </div>
+
+        <!-- Repeat this structure for more music tracks (albums and singles) -->
+
+    </div>
+
+    <a href="music.html" class="explore-button">
+        Back to free music
+</body>
+</html>
